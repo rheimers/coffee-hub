@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  font-family: monospace;
+  font-size: 1.1rem;
+}
+.btn-btn-minus {
+  background-color: #cf9775;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 100px 0 0 100px;
+  align-self: center;
+  border-style: none;
+}
+.btn-btn-plus {
+  background-color: black;
+  color: #f4f4f4;
+  padding: 10px 16px;
+  border-radius: 0 100px 100px 0;
+  align-self: center;
+  border-style: none;
+}
+.coffee-counter {
+  color: #000;
+  padding: 13px 24px;
+}
