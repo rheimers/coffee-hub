@@ -1,25 +1,38 @@
-.container {
+.quantitySelector {
+  font-family: "Sen", sans-serif;
   display: flex;
-  font-family: monospace;
+  align-items: stretch;
+}
+
+.quantitySelector > div {
   font-size: 1.1rem;
+  color: #2d140d;
+  padding: 4px 14px;
+  flex-grow: 1;
+  text-align: center;
 }
-.btn-btn-minus {
-  background-color: #cf9775;
-  color: #fff;
-  padding: 10px 16px;
+
+.quantitySelector > button {
+  color: white;
+  background: #cf9775;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.quantitySelector > button:first-child {
   border-radius: 100px 0 0 100px;
-  align-self: center;
-  border-style: none;
+  padding-left: 12px;
 }
-.btn-btn-plus {
-  background-color: black;
-  color: #f4f4f4;
-  padding: 10px 16px;
+
+.quantitySelector > button:last-child {
   border-radius: 0 100px 100px 0;
-  align-self: center;
-  border-style: none;
+  padding-right: 12px;
 }
-.coffee-counter {
-  color: #000;
-  padding: 13px 24px;
+
+.quantitySelector > button > svg {
+  fill: #fff;
 }
