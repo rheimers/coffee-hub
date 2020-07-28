@@ -1,0 +1,22 @@
+.welcome {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../../assets/bg.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation > * {
+  animation: fadeIn 2s;
+}
+
+@keyframes {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
