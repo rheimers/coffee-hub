@@ -9,17 +9,23 @@ export const coffeeSelector = () => {
     // Select buttons here
     const minusButton = document.querySelector(".quantitySelector__minus");
     const plusButton = document.querySelector(".quantitySelector__plus");
+    const resultElement = document.querySelector(".quantitySelector__result");
 
     minusButton.addEventListener("click", () => {
-      alert(quantityButton.innerHTML);
-      quantityButton.innerHTML = "Cool";
+      const oldResult = Number(resultElement.innerHTML);
+      if (oldResult === 2) {
+        minusButton.disabled = true;
+      }
+      resultElement.innerHTML = oldResult - 1;
     });
-
-    const quantityButtonDown = document.querySelector(".buttonDown");
-    quantityButtonDown.addEventListener("click", () => {
-      alert(quantityButtonDown.innerHTML);
-      quantityButtonDown.innerHTML = "Not so cool";
+    plusButton.addEventListener("click", () => {
+      const oldResult = Number(resultElement.innerHTML);
+      if (oldResult === 1) {
+        minusButton.disabled = false;
+      }
+      resultElement.innerHTML = oldResult + 1;
     });
   });
+
   return quantitySelector;
 };
