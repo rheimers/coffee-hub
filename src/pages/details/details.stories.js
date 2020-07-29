@@ -1,36 +1,31 @@
-import { useEffect } from "@storybook/client-api";
+// import "./button.css";
+// import { createButton } from "./button";
 
-export default {
-  title: "Pages/Details",
-};
+// export default { title: "Button" };
 
-export const basic = () => {
-  //   alert("Button!!!");
-  useEffect(() => {
-    //  alert("Button!!!");
-    const button = document.querySelector(".btn");
-    button.addEventListener("click", () => {
-      alert(button.innerHTML);
-      button.innerHTML = "9000";
-    });
-  });
-  return '<button class="btn">Cool</button>';
-};
+// export const addToCart = () => {
+//   let button = createButton("Add to cart");
 
-/*
-calls international alert function
-*/
+//   button.addEventListener("click", () => {
+//     alert("Hello");
+//   });
 
-// Calls internal alert function
-// const message = "Hello Fishy"
-// message = "Fish Ahoi Emjoji???";
+//   return button;
+// };
+// /*
+// calls international alert function
+// */
 
-// let message = "Hello Fishy";
-// alert(message);
-// message = "Fish ahoi";
-// // alert ("Hello");
-// alert("Hello");
+// // Calls internal alert function
+// // const message = "Hello Fishy"
+// // message = "Fish Ahoi Emjoji???";
 
-// const numberOfStudents = 15.5;
-// const message = `Hello ${numberOfStudents} fishes`;
-// alert(message);
+// // let message = "Hello Fishy";
+// // alert(message);
+// // message = "Fish ahoi";
+// // // alert ("Hello");
+// // alert("Hello");
+
+// // const numberOfStudents = 15.5;
+// // const message = `Hello ${numberOfStudents} fishes`;
+// // alert(message);
