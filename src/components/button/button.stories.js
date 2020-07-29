@@ -1,19 +1,8 @@
 import "./button.css";
+import { createButton } from "./button";
 // import button from "./button.html";
 
 export default { title: "Button" };
-
-function createButton(buttonText) {
-  const button = document.createElement("button");
-  button.className = "btn";
-  const text = document.createTextNode(buttonText);
-  button.append(text);
-
-  button.addEventListener("click", () => {
-    alert("Follows button click");
-  });
-  return button;
-}
 
 export const addToCart = () => {
   const button = createButton("Add to cart");

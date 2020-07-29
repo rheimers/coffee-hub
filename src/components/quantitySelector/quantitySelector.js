@@ -16,11 +16,6 @@ export const createQuantitySelector = () => {
   return quantitySelector;
 };
 
-//Outer div
-const quantitySelector = createElement("div", {
-  className: "quantitySelector",
-});
-
 //First button (Minus)
 const minusButton = createElement("button", {
   className: "quantitySelector__minus",

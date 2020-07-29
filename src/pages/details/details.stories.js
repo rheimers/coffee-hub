@@ -1,31 +1,40 @@
-// import "./button.css";
-// import { createButton } from "./button";
+import { createQuantitySelector } from "../../components/quantitySelector/quantitySelector";
+import { createButton } from "../../components/button/button";
+import { createElement } from "../../utils/element.js";
 
-// export default { title: "Button" };
+export default { title: "Pages/Details" };
 
-// export const addToCart = () => {
-//   let button = createButton("Add to cart");
+export const basic = () => {
+  const main = createElement("main", { className: "details" });
+  const header = createElement("header", { className: "details__header" });
+  const title = createElement("h2", { innerText: "Macchiato" });
+  header.append(title);
 
-//   button.addEventListener("click", () => {
-//     alert("Hello");
-//   });
+  const form = createElement("form", { className: "details__form" });
+  const coffeeName = createElement("div", { innerText: "Macchiato" });
+  const price = createElement("div", { innerText: "$2.80" });
+  coffeeName.append(price);
 
-//   return button;
-// };
-// /*
-// calls international alert function
-// */
+  const coffeeSize = createElement("label", { innerText: "Size" });
+  const size = createElement("input");
+  coffeeSize.append(size);
 
-// // Calls internal alert function
-// // const message = "Hello Fishy"
-// // message = "Fish Ahoi Emjoji???";
+  const coffeeSugar = createElement("label", { innerText: "Sugar" });
+  const sugar = createElement("input");
+  coffeeSugar.append(sugar);
 
-// // let message = "Hello Fishy";
-// // alert(message);
-// // message = "Fish ahoi";
-// // // alert ("Hello");
-// // alert("Hello");
+  const quantitySelector = createQuantitySelector();
+  const button = createButton("Add to cart");
 
-// // const numberOfStudents = 15.5;
-// // const message = `Hello ${numberOfStudents} fishes`;
-// // alert(message);
+  main.append(header);
+
+  form.append(coffeeName);
+  form.append(quantitySelector);
+  form.append(coffeeSize);
+  form.append(coffeeSugar);
+  form.append(button);
+
+  main.append(form);
+
+  return main;
+};
