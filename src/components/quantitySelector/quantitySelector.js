@@ -1,4 +1,8 @@
-export const createQuantiitySelector = () => {
+import minusSrc from "../../assets/minus.svg";
+import plusSrc from "../../assets/plus.svg";
+import { createElement } from "../../utils/element";
+
+export const createQuantitySelector = () => {
   //Outer div
   const quantitySelector = document.createElement("div");
   quantitySelector.className = "quantitySelector";
@@ -11,24 +15,41 @@ export const createQuantiitySelector = () => {
   quantitySelector.append(minusButton);
   return quantitySelector;
 };
+
+//Outer div
+const quantitySelector = createElement("div", {
+  className: "quantitySelector",
+});
+
+//First button (Minus)
+const minusButton = createElement("button", {
+  className: "quantitySelector__minus",
+  disabled: true,
+});
+
 //Minus image
-const minusImage = document.createElement('img');
-minusImage.src= 
-// kommt noch was
+const minusImage = document.createElement("img", {
+  src: minusSrc,
+  alt: "Minus",
+});
+
+minusButton.append(minusImage);
 
 // Result
-const resultElement = document.createElement("div");
-resultElement.className = "quantitySelector__result";
-resultElement.innerText = "1";
+const resultElement = createElement("div", {
+  className: "quantitySelector__result",
+  innerText: "1",
+});
 
 //Second button (Plus)
-const plusButton = document.createElement ("button");
-plusButton.className = "quantitySelector_plus";
-plusButton.innerHTML = "+";
+const plusButton = createElement("button", {
+  className: "quantitySelector__plus",
+});
 
-quantitySelector.append(minusButton);
-quantitySelector.append(resultButton);
-quantitySelector.append(plusButton);
+//Plus image
+const plusImage = createElement("img", {
+  src: plusSrc,
+  alt: "Plus",
+});
 
-return quantitySelector;
-
+plusButton.append(plusImage);
